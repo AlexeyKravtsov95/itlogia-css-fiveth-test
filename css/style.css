@@ -156,6 +156,10 @@ body {
     animation-delay: .5s;
 }
 
+.main__image-img {
+    z-index: 2;
+}
+
 .description {
     padding: 119px 0 30px 0;
     background-color: rgb(255, 239, 239);
@@ -167,15 +171,11 @@ body {
     align-items: center;
 }
 
-.description__info {
-    max-width: 475px;
-}
-
 .description__title {
     font-size: 45px;
     color: rgb(51, 25, 7);
     line-height: 1.222;
-    margin-bottom: 60px;
+    max-width: 475px;
 }
 
 .description__subtitle {
@@ -184,6 +184,7 @@ body {
     color: rgb(51, 25, 7);
     line-height: 1.556;
     max-width: 400px;
+    padding-top: 60px;
 }
 
 .advantages {
@@ -193,8 +194,9 @@ body {
 
 .advantages__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 86px;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-column-gap: 86px;
+    justify-content: space-between;
 }
 
 .advantage {
@@ -233,7 +235,6 @@ body {
     font-size: 20px;
     font-family: GilroyExtraBold, sans-serif;
     color: rgb(51, 25, 7);
-    margin-bottom: 20px;
 }
 
 
@@ -259,8 +260,9 @@ body {
 
 .macaroons__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 29px;
+    gap: 136px 29px;
+    grid-template-columns: repeat(auto-fill, minmax(263px, 263px));
+    justify-content: center;
 }
 
 .macaroon {
@@ -286,7 +288,7 @@ body {
     font-size: 45px;
     color: rgb(255, 255, 255);
     text-align: center;
-    margin-bottom: 81px;
+    margin-bottom: 143px;
 }
 
 .macaroon__image {
@@ -440,13 +442,13 @@ body {
 .footer {
     padding: 80px 0 62px 0;
     background-color: #c0707c;
-    position: relative;
 }
 
 .footer__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .footer__copyright {
@@ -510,7 +512,7 @@ body {
     opacity: 0;
 }
 
-.present__popup:after {
+.present__popup::after {
     content: '';
     position: absolute;
     width: 0;
@@ -585,4 +587,12 @@ body {
         transform: scale(3.5);
         opacity: 0;
     }
+}
+
+.menu__close {
+    display: none;
+}
+
+.header__burger {
+    display: none;
 }
