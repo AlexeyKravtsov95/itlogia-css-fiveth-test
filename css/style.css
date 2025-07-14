@@ -66,7 +66,7 @@ body {
 }
 
 .menu__link:hover {
-    border-bottom: 1px solid #821328;
+    border-bottom: 2px solid #821328;
     transform: scale(1);
 }
 
@@ -74,6 +74,7 @@ body {
     font-size: 16px;
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .main {
@@ -148,7 +149,7 @@ body {
     border-radius: 50%;
     z-index: 1;
     animation: pulse 3s ease-out infinite;
-    border: 1px solid #ff3952;
+    border: 1px solid #821328;
     opacity: 0;
 }
 
@@ -159,6 +160,7 @@ body {
 .main__image-img {
     z-index: 2;
 }
+
 
 .description {
     padding: 119px 0 30px 0;
@@ -482,12 +484,14 @@ body {
     font-size: 16px;
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .present {
     position: fixed;
     right: 48px;
     bottom: 48px;
+    z-index: 3;
 }
 
 .present__wrapper {

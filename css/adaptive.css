@@ -5,25 +5,17 @@
     }
 }
 
-@media screen and (max-width: 1156px) {
-    .advantages__items {
-        grid-column-gap: 10px;
+@media screen and (max-width: 1167px) {
+    .macaroons__items {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
 
     .main__image::before, .main__image::after {
         width: 170px;
         height: 170px;
     }
-}
 
-@media screen and (max-width: 1060px) {
-    .macaroons__items {
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
-}
-
-@media screen and (max-width: 940px) {
     .advantages__items {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -34,7 +26,9 @@
         display: grid;
         justify-items: center;
     }
+}
 
+@media screen and (max-width: 940px) {
     .order__second-strawberry {
         right: 75px;
     }
@@ -45,13 +39,21 @@
     }
 }
 
-@media screen and (max-width: 788px) {
+@media screen and (max-width: 851px) {
     .order__info {
         margin-left: 15px;
     }
 
     .order__second-strawberry {
-        right: 0;
+        bottom: 5px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .description__img-img {
+        width: 500px;
+        height: 300px;
     }
 }
 
@@ -79,6 +81,15 @@
     .main__image {
         bottom: 82px;
         margin-left: 188px;
+    }
+
+    .main__btn {
+        position: relative;
+        z-index: 1;
+    }
+
+    .main__image::before, .main__image::after {
+        z-index: 0;
     }
 
     .description__container {
@@ -138,8 +149,8 @@
     }
 
     .order__second-strawberry {
-        top: 154px;
-        right: 120px;
+        left: 610px;
+        bottom: 420px;
     }
 
     @media screen and (max-width: 680px) {
@@ -161,8 +172,13 @@
         }
 
         .order__strawberry {
-            top: 150px;
+            top: 160px;
             left: 348px;
+        }
+
+        .order__strawberry-img {
+            width: 65px;
+            height: 75px;
         }
 
         .order__place-order {
@@ -209,6 +225,20 @@
 
         .main__btn {
             margin-bottom: 38px;
+        }
+
+        @keyframes swimming {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, -20%);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
         }
     }
 
@@ -308,10 +338,57 @@
         }
     }
 
+    @media screen and (max-width: 450px) {
+        .footer {
+            padding: 50px 0 50px 0;
+        }
+
+        .footer__container {
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .footer__rights {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__copyright {
+            position: absolute;
+            width: 168px;
+            top: 200px;
+        }
+
+        .footer__phone {
+            order: 1;
+            padding: 40px 0 40px 0;
+        }
+
+        .footer__social {
+            order: 2;
+            margin-bottom: 40px;
+        }
+    }
+
     @media screen and (max-width: 444px) {
+        .main {
+            padding: 87px 0 43px 0;
+        }
+
+        .main__title {
+            font-size: 32px;
+        }
+
+        .main__subtitle {
+            font-size: 16px;
+        }
+
         .order {
             padding: 100px 0 77px 0;
         }
+
         .order__strawberry {
             height: 118px;
             left: 283px;
@@ -345,18 +422,6 @@
             margin-bottom: 0;
         }
 
-        .main {
-            padding: 87px 0 43px 0;
-        }
-
-        .main__title {
-            font-size: 32px;
-        }
-
-        .main__subtitle {
-            font-size: 16px;
-        }
-
         .macaroons {
             padding: 100px 0 100px 0;
         }
@@ -366,35 +431,24 @@
             margin-bottom: 122px;
         }
 
-        .footer {
-            padding: 50px 0 50px 0;
+        .main__image::before, .main__image::after {
+            width: 80px;
+            height: 80px;
         }
 
-        .footer__container {
-            flex-direction: column;
-            align-items: center;
-            position: relative;
+        .present__logo-img {
+            width: 40px;
+            height: 40px;
         }
 
-        .footer__copyright {
-            position: absolute;
-            width: 168px;
-            top: 200px;
-            left: 100px;
-        }
-
-        .footer__phone {
-            order: 1;
-            padding: 40px 0 40px 0;
-        }
-
-        .footer__social {
-            order: 2;
-            margin-bottom: 40px;
+        .present__logo::before {
+            width: 75px;
+            height: 75px;
+            left: 93%;
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 373px) {
         .main__title {
             font-size: 25px;
         }
@@ -411,17 +465,21 @@
             font-size: 25px;
             width: 250px;
         }
+
         .description__subtitle {
             font-size: 13px;
             width: 250px;
         }
+
         .description__img-img {
             width: 250px;
             height: 130px;
         }
+
         .order__strawberry {
             display: none;
         }
+
         .advantages__items {
             grid-template-columns: repeat(auto-fill, 220px);
             grid-row-gap: 16px;
